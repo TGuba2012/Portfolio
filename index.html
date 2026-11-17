@@ -3,45 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Мое Портфолио</title>
+    <title>Тимур | Вайб-кодер</title>
     <style>
+        /* Сброс настроек */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        /* Красивый градиентный фон */
         body {
-            background-color: #121212;
+            background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
             color: #ffffff;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
-            margin: 0;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        /* Карточка с эффектом стекла */
+        .card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 40px 30px;
+            border-radius: 20px;
             text-align: center;
+            max-width: 400px;
+            width: 100%;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.5);
+            
+            /* Анимация появления */
+            animation: fadeIn 1.5s ease-out;
         }
-        .container {
-            background: #1e1e1e;
-            padding: 40px;
-            border-radius: 15px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
-            border: 1px solid #333;
-        }
-        h1 { margin-bottom: 10px; font-size: 2.5em; }
-        p { color: #aaaaaa; font-size: 1.2em; margin-bottom: 30px; }
-        .btn {
-            background-color: #007bff;
-            color: white;
-            padding: 12px 24px;
-            text-decoration: none;
-            border-radius: 8px;
+
+        /* Аватарка (пока заглушка) */
+        .avatar {
+            width: 100px;
+            height: 100px;
+            background: linear-gradient(45deg, #ff8a00, #e52e71);
+            border-radius: 50%;
+            margin: 0 auto 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 40px;
             font-weight: bold;
-            transition: 0.3s;
+            box-shadow: 0 0 20px rgba(229, 46, 113, 0.5);
         }
-        .btn:hover { background-color: #0056b3; }
+
+        h1 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            letter-spacing: 1px;
+        }
+
+        .subtitle {
+            color: #a0a0a0;
+            font-size: 16px;
+            margin-bottom: 30px;
+            line-height: 1.5;
+        }
+
+        /* Контейнер для кнопок */
+        .links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        /* Стили кнопок */
+        .btn {
+            display: block;
+            text-decoration: none;
+            color: white;
+            padding: 15px;
+            border-radius: 12px;
+            font-weight: bold;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+
+        .btn-tg {
+            background: #0088cc;
+            box-shadow: 0 4px 15px rgba(0, 136, 204, 0.4);
+        }
+
+        .btn-tg:hover {
+            background: #006699;
+            transform: translateY(-3px);
+        }
+
+        .btn-github {
+            background: #333;
+            box-shadow: 0 4px 15px rgba(51, 51, 51, 0.4);
+        }
+
+        .btn-github:hover {
+            background: #24292e;
+            transform: translateY(-3px);
+        }
+
+        /* Ключевые кадры для анимации */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Привет, я Тимур</h1>
-        <p>14 лет. Вайб-кодер. Создаю сайты и ботов.</p>
-        <a href="mailto:timur@example.com" class="btn">Связаться со мной</a>
+
+    <div class="card">
+        <div class="avatar">Т</div>
+        <h1>Тимур</h1>
+        <p class="subtitle">14 лет. Вайб-кодер.<br>Создаю сайты и Telegram-ботов.</p>
+        
+        <div class="links">
+            <a href="https://t.me/timurgubaev" target="_blank" class="btn btn-tg">Написать в Telegram</a>
+            <a href="https://github.com/TGuba2012" target="_blank" class="btn btn-github">Мой GitHub</a>
+        </div>
     </div>
+
 </body>
 </html>
